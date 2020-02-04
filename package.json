@@ -1,15 +1,14 @@
 {
   "name": "dooliz-lib",
   "version": "1.0.2",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "author": "Jérôme LEGRAND",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "node_modules/.bin/webpack --mode=development --progress",
-    "watch": "node_modules/.bin/webpack --mode=development --progress --watch",
-    "prod": "node_modules/.bin/webpack --mode=production --progress",
-    "start": "node_modules/.bin/webpack-dev-server --mode=development --progress"
+    "prepack": "babel src -d dist",
+    "build": "yarn run prepack",
+    "watch": "yarn run prepack --watch"
   },
   "peerDependencies": {
     "react": "^16.12.0",
@@ -27,8 +26,6 @@
     "html-loader": "^0.5.5",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
     "svg-inline-loader": "^0.8.0",
@@ -40,7 +37,6 @@
     "moment": "^2.24.0",
     "react-beautiful-dnd": "^12.2.0",
     "react-day-picker": "^7.4.0",
-    "react-rater": "^5.1.1",
     "react-router-dom": "^5.1.2",
     "react-select": "^3.0.8",
     "react-tabs": "^3.1.0"
