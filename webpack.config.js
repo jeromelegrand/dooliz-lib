@@ -9,6 +9,10 @@ module.exports = {
         path: path.join(__dirname, 'dist'),
         libraryTarget: 'commonjs2',
     },
+    externals: {
+        react: 'react',
+        reactDOM: 'react-dom',
+    },
     module: {
         rules: [
             {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},

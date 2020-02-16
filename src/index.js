@@ -1,11 +1,13 @@
-import * as React from 'react';
-const {useState} = React;
+import React, {useState} from 'react';
 
 const DoolizLib = () => {
-    // const [state, setState] = useState('foo');
+    const [state, setState] = useState('foo');
 
     return (
-        <div>test </div>
+        <div>
+            <h1>test:  {state}</h1>
+            <button onClick={() => setState(state === 'foo' ? 'bar': 'foo')}>change</button>
+        </div>
     );
 };
 
