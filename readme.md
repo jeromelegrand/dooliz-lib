@@ -1,16 +1,15 @@
 #bug reproduction
 
 ```bash
-yarn && yarn watch
-
-# in an other console
-cd env-test && yarn && yarn start
+yarn && yarn prod && cd env-test && yarn && yarn start
 ```
 
-You will show a page with the word test
+it will show the project working
 
-Open src indx.js
+##in an other console
+rebuild in dev mode
+```bash
+yarn dev
+```
 
-Uncomment line 5 (useState)
-
-You will have the error.
+you will get the error
